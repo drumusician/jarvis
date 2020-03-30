@@ -55,6 +55,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 " === Elixir Plugins === "
 Plug 'elixir-editors/vim-elixir'
 
+" === Wakatime === "
+Plug 'wakatime/vim-wakatime'
 
 " ReactJS JSX syntax highlighting
 Plug 'mxw/vim-jsx'

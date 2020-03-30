@@ -52,6 +52,10 @@ Plug 'tpope/vim-fugitive'
 " Typescript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim'
 
+" === Elixir Plugins === "
+Plug 'elixir-editors/vim-elixir'
+
+
 " ReactJS JSX syntax highlighting
 Plug 'mxw/vim-jsx'
 
@@ -83,6 +87,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Vimwiki
+Plug 'vimwiki/vimwiki'
 
 " Initialize plugin system
 call plug#end()

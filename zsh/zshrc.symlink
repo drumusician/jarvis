@@ -1,6 +1,8 @@
 # Path to oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+export ZSH_DISABLE_COMPFIX=true
+
 # Name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME=""
@@ -27,7 +29,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node brew tmux)
+plugins=(git node brew asdf)
 
 # User configuration
 # Hide user@hostname if it's expected default user
@@ -109,13 +111,16 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set default editor to nvim
 export EDITOR='nvim'
 
+# set locale
+export LC_ALL=en_US.UTF-8
+
 # Enabled true color support for terminals
 export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 # Aliases
 alias vim="nvim"
 alias top="vtop --theme=wizard"
-alias ls="colorls -lA --sd"
+# alias ls="colorls -lA --sd"
 
 source $ZSH/oh-my-zsh.sh
 

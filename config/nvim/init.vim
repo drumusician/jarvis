@@ -168,6 +168,9 @@ try
 " Enable extensions
 let g:airline_extensions = ['branch', 'hunks', 'coc']
 
+let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
+let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
+
 " Update section z to just have line number
 let g:airline_section_z = airline#section#create(['linenr'])
 
@@ -403,11 +406,11 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 " === coc.nvim === "
-"   <leader>dd    - Jump to definition of current symbol
+"   gd    - Jump to definition of current symbol
 "   <leader>dr    - Jump to references of current symbol
 "   <leader>dj    - Jump to implementation of current symbol
 "   <leader>ds    - Fuzzy search current project symbols
-nmap <silent> <leader>dd <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
 nmap <silent> <leader>dj <Plug>(coc-implementation)
 nnoremap <silent> <leader>ds :<C-u>CocList -I -N --top symbols<CR>
@@ -416,7 +419,7 @@ nnoremap <silent> <leader>ds :<C-u>CocList -I -N --top symbols<CR>
 "   <leader>y - Automatically remove trailing whitespace
 nmap <leader>y :StripWhitespace<CR>
 
-" === Search shorcuts === "
+" ==j Search shorcuts === "
 "   <leader>h - Find and replace
 "   <leader>/ - Claer highlighted search terms while preserving history
 map <leader>h :%s///<left><left>
@@ -475,3 +478,10 @@ set noswapfile
 if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
+
+" =======================================================================
+" ===========   Vimwiki Settings  ==========
+" =======================================================================
+
+let g:vimwiki_folding = 'list' 
+let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md','custom_wiki2html': 'vimwiki_markdown', 'path_html': '~/vimwiki/site_html/', 'template_path': '~/vimwiki/templates/','template_default': 'default'}]
